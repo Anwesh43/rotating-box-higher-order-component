@@ -39,3 +39,24 @@ export const useDimnension = () => {
         w, h
     }
 }
+
+export const useStyle = (w, h, scale) => {
+    const size = Math.min(w, h) / 10
+    const width = `${size}px`
+    const height = `${size}px`
+    const background = 'indigo'
+    const fontSize = `${size / 10}px`
+    const color = 'white'
+    const WebkitTransform = `rotate(${360 * scale}deg)` 
+    return {
+        blockStyle() {
+            color, 
+            background, 
+            width, 
+            height, 
+            fontSize, 
+            color, 
+            WebkitTransform
+        }
+    }
+}
