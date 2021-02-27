@@ -25,3 +25,17 @@ export const useAnimatedScale = () => {
         }
     }
 }
+
+export const useDimnension = () => {
+    const [w, setW] = useState(window.innerWidth)
+    const [h, setH] = useState(window.innerHeight)
+    useEffect(() => {
+        window.onresize = () => {
+            setW(window.innerWidth)
+            setH(window.innerHeight)
+        }
+    })
+    return {
+        w, h
+    }
+}
