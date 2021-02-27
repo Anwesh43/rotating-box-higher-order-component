@@ -8,9 +8,9 @@ import {
 const RotatingBlock = ({children}) => {
     const {scale, start} = useAnimatedScale()
     const {w, h} = useDimension()
-    const {blockStyle} = useStyle(w, h, sccale)
+    const {blockStyle} = useStyle(w, h, scale)
     return (
-        <div style = {blockStyle()}>
+        <div style = {blockStyle()} onClick = {start}>
             {children}
         </div>
     )

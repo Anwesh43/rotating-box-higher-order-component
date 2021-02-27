@@ -26,7 +26,7 @@ export const useAnimatedScale = () => {
     }
 }
 
-export const useDimnension = () => {
+export const useDimension = () => {
     const [w, setW] = useState(window.innerWidth)
     const [h, setH] = useState(window.innerHeight)
     useEffect(() => {
@@ -47,16 +47,24 @@ export const useStyle = (w, h, scale) => {
     const background = 'indigo'
     const fontSize = `${size / 10}px`
     const color = 'white'
+    const display = 'flex'
+    const alignItems = 'center'
+    const justifyContent = 'center'
     const WebkitTransform = `rotate(${360 * scale}deg)` 
     return {
         blockStyle() {
-            color, 
-            background, 
-            width, 
-            height, 
-            fontSize, 
-            color, 
-            WebkitTransform
+            return {
+                color, 
+                background, 
+                width, 
+                height, 
+                fontSize, 
+                color, 
+                WebkitTransform,
+                display, 
+                alignItems, 
+                justifyContent
+            }
         }
     }
 }

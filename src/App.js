@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+import RotatingBlock from './RotatingBlock'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <RotatingBlock>
+            <div style = {{width: '20px', height: '20px', background: 'green'}}>
+            </div>
+        </RotatingBlock>
+        
+        <RotatingBlock>
+            <div style = {{width: '20px', height: '20px', border: '1px solid black'}}>
+            </div>
+        </RotatingBlock>
     </div>
   );
 }
